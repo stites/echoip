@@ -1,6 +1,8 @@
 echoip
 ======
 
-A simple script to get your public address from [ipecho.net](http://ipecho.net/), and your gateway address from netstat.
+A simple script to get your public and gateway addresses via [ipecho](http://ipecho.net/) and netstat.
 
-To install, simply run `./install` in the terminal. This copies the script to `/usr/local/bin`, which is assumed to be in `$PATH`. To uninstall, you can either run `./uninstall` or `rm /usr/local/bin/echoip`.
+To install, simply execute `./install` from the repo directory.
+
+Run `./uninstall` to uninstall.

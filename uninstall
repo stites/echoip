@@ -1,0 +1,15 @@
+#!/bin/sh
+MD5_SCRIPT=`md5 $(pwd)/echoip | cut -d '=' -f 2`
+INSTALL_PATH="/usr/local/bin/echoip"
+if [ -f $INSTALL_PATH ];
+then
+   MD5_INSTALLED=`md5 $INSTALL_PATH | cut -d '=' -f 2`
+   if [ "$MD5_SCRIPT" == "$MD5_INSTALLED" ]; then
+     rm $INSTALL_PATH
+     echo "Uninstalled echoip"
+   else
+     echo "!!! Found a different script! Abort!"
+   fi
+else
+   echo "echoip not found in $INSTALL_PATH"
+fi

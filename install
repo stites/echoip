@@ -1,2 +1,2 @@
 #!/bin/sh
-cp ./echoip /usr/local/bin
+cp -p ./echoip /usr/local/bin

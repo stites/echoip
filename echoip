@@ -1,2 +1,9 @@
 #!/bin/sh
-wget -qO- http://ipecho.net/plain ; echo
+PUBLIC=`wget -qO- http://ipecho.net/plain`
+INTERFACES=`netstat -i | grep -E '\d+\.\d+\.\d+\.\d+' | cut -d ' ' -f 1`
+INTERFACE_IPS=`netstat -i | grep -oE '\d+\.\d+\.\d+\.\d+'`
+
+echo "public:\t$PUBLIC"
+for i in "${!INTERFACES[@]}"; do
+  printf "%s:\t%s\n" "${INTERFACES[$i]}" "${INTERFACE_IPS[$i]}"
+done

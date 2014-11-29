@@ -1,7 +1,8 @@
 #!/bin/sh
 PUBLIC=`wget -qO- http://ipecho.net/plain`
-INTERFACES=`netstat -i | grep -E '\d+\.\d+\.\d+\.\d+' | cut -d ' ' -f 1`
-INTERFACE_IPS=`netstat -i | grep -oE '\d+\.\d+\.\d+\.\d+'`
+IPV4='\d+(\.\d+){3}'
+INTERFACES=`netstat -i | grep -E "$IPV4" | cut -d ' ' -f 1`
+INTERFACE_IPS=`netstat -i | grep -oE "$IPV4"`
 
 echo "public:\t$PUBLIC"
 for i in "${!INTERFACES[@]}"; do

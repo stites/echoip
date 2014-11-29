@@ -1,2 +1,2 @@
 #!/bin/sh
-curl ipecho.net/plain ; echo
+wget -qO- http://ipecho.net/plain ; echo

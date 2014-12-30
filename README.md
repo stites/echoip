@@ -1,6 +1,8 @@
 echoip
 ======
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stites/echoip?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A simple script to get your public and gateway addresses via [ipecho](http://ipecho.net/) and netstat.
 
 To install, simply execute `./install` from the repo directory. Run the command with `echoip`.
